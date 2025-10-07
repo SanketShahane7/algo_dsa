@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using algo_dsa.BinarySearch;
 using algo_dsa.LinkedList;
 using algo_dsa.Queue;
 using algo_dsa.Stacks;
@@ -73,17 +74,33 @@ Console.WriteLine("Hello, World!");
 
 #region Queue Implementation
 
-Queue queue = new Queue(5);
-for (int i = 0; i < 5; i++)
+// Queue queue = new Queue(5);
+// for (int i = 0; i < 5; i++)
+// {
+//     queue.Enqueue($"Item {i + 1}");
+// }
+
+// queue.Dequeue();
+// queue.Dequeue();
+
+// Console.WriteLine($"Top item is: {queue.Peek()}");
+
+#endregion
+
+
+#region Binary Search Implementation
+
+int[] arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+BinarySearch binarySearch = new BinarySearch(arr);
+int target = 4;
+int index = binarySearch.Search(target);
+if (index != -1)
 {
-    queue.Enqueue($"Item {i + 1}");
+    Console.WriteLine($"Target {target} found at index: {index}");
 }
-
-queue.Dequeue();
-queue.Dequeue();
-
-Console.WriteLine($"Top item is: {queue.Peek()}");
-
-
+else
+{
+    Console.WriteLine($"Target {target} not found in the array.");
+}
 
 #endregion
