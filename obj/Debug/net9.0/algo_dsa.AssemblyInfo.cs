@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("algo_dsa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2377be8fe62a5f1fcd610c67cd738c38b38f8036")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d66530ea518c71bf93c53730f26d1add90d7c23b")]
 [assembly: System.Reflection.AssemblyProductAttribute("algo_dsa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("algo_dsa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
