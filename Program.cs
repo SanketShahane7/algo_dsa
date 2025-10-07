@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using algo_dsa.BinarySearch;
+using algo_dsa.BinarySearchTree;
 using algo_dsa.LinkedList;
 using algo_dsa.Queue;
 using algo_dsa.Stacks;
@@ -90,17 +91,33 @@ Console.WriteLine("Hello, World!");
 
 #region Binary Search Implementation
 
-int[] arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-BinarySearch binarySearch = new BinarySearch(arr);
-int target = 4;
-int index = binarySearch.Search(target);
-if (index != -1)
-{
-    Console.WriteLine($"Target {target} found at index: {index}");
-}
-else
-{
-    Console.WriteLine($"Target {target} not found in the array.");
-}
+// int[] arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// BinarySearch binarySearch = new BinarySearch(arr);
+// int target = 4;
+// int index = binarySearch.Search(target);
+// if (index != -1)
+// {
+//     Console.WriteLine($"Target {target} found at index: {index}");
+// }
+// else
+// {
+//     Console.WriteLine($"Target {target} not found in the array.");
+// }
+
+#endregion
+
+
+#region Binary Search Tree Implementation
+
+BinarySearchTree bst = new BinarySearchTree();
+bst.Insert(7, "Squirtle");
+bst.Insert(3, "Eknas");
+bst.Insert(151, "Mew");
+bst.Insert(4, "Charmander");
+bst.Insert(1, "Bulbasaur");
+bst.Insert(6, "Pikachu");
+bst.Insert(8, "Charizard");
+
+Console.WriteLine($"-- Search for 6: {bst.Search(6).Value}"); // Should find Pikachu
 
 #endregion
