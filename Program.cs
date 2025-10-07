@@ -1,0 +1,70 @@
+﻿// See https://aka.ms/new-console-template for more information
+using algo_dsa.LinkedList;
+using algo_dsa.Stacks;
+
+Console.WriteLine("Hello, World!");
+
+
+#region Linked List Implementation
+
+// Node nodeA = new Node();
+// nodeA.Data = 10;
+
+// Node nodeB = new Node();
+// nodeB.Data = 20;
+
+// Node nodeC = new Node();
+// nodeC.Data = 30;
+
+// nodeA.Next = nodeB;
+// nodeB.Next = nodeC;
+
+
+// LinkedList linkedList = new LinkedList();
+// linkedList.InsertFirst(10);
+// linkedList.InsertFirst(20);
+// linkedList.InsertFirst(30);
+
+// linkedList.InsertLast(5);
+// linkedList.DisplayList(); // Should display 30, 20, 10, 5
+
+// linkedList.DeleteFirst();
+// linkedList.DisplayList(); // Should display 20, 10, 5
+
+// linkedList.DeleteFirst();
+// linkedList.DisplayList(); // Should display 10, 5
+
+// linkedList.DeleteFirst();
+// linkedList.DisplayList(); // Should display 5
+
+// linkedList.DeleteFirst();
+// linkedList.DisplayList(); // Should display "List is empty"
+
+// linkedList.DeleteFirst(); // Should display "List is empty. Cannot delete."
+
+#endregion
+
+
+#region Stack Implementation
+
+Stack stack = new Stack(10);
+
+for(int i = 0; i < 10; i++)
+{
+    stack.Push($"Item {i+1}");
+}
+
+Console.WriteLine($"Top item is: {stack.Peek()}");
+
+stack.Pop();
+Console.WriteLine($"Top item is: {stack.Peek()}");
+
+while(!stack.IsEmpty())
+{
+    stack.Pop();
+}
+
+stack.Pop(); // Should display "Stack is empty. Cannot pop element."
+
+
+#endregion
