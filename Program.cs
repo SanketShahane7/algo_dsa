@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using algo_dsa.LinkedList;
+using algo_dsa.Queue;
 using algo_dsa.Stacks;
 
 Console.WriteLine("Hello, World!");
@@ -47,24 +48,42 @@ Console.WriteLine("Hello, World!");
 
 #region Stack Implementation
 
-Stack stack = new Stack(10);
+// Stack stack = new Stack(10);
 
-for(int i = 0; i < 10; i++)
+// for(int i = 0; i < 10; i++)
+// {
+//     stack.Push($"Item {i+1}");
+// }
+
+// Console.WriteLine($"Top item is: {stack.Peek()}");
+
+// stack.Pop();
+// Console.WriteLine($"Top item is: {stack.Peek()}");
+
+// while(!stack.IsEmpty())
+// {
+//     stack.Pop();
+// }
+
+// stack.Pop(); // Should display "Stack is empty. Cannot pop element."
+
+
+#endregion
+
+
+#region Queue Implementation
+
+Queue queue = new Queue(5);
+for (int i = 0; i < 5; i++)
 {
-    stack.Push($"Item {i+1}");
+    queue.Enqueue($"Item {i + 1}");
 }
 
-Console.WriteLine($"Top item is: {stack.Peek()}");
+queue.Dequeue();
+queue.Dequeue();
 
-stack.Pop();
-Console.WriteLine($"Top item is: {stack.Peek()}");
+Console.WriteLine($"Top item is: {queue.Peek()}");
 
-while(!stack.IsEmpty())
-{
-    stack.Pop();
-}
-
-stack.Pop(); // Should display "Stack is empty. Cannot pop element."
 
 
 #endregion
