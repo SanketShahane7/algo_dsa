@@ -12,3 +12,4 @@
 /Users/sanketshahane/projects/practice/DSA/algo-dsa/algo_dsa/obj/Debug/net9.0/algo_dsa.pdb
 /Users/sanketshahane/projects/practice/DSA/algo-dsa/algo_dsa/obj/Debug/net9.0/algo_dsa.genruntimeconfig.cache
 /Users/sanketshahane/projects/practice/DSA/algo-dsa/algo_dsa/obj/Debug/net9.0/ref/algo_dsa.dll
+/Users/sanketshahane/projects/practice/DSA/algo-dsa/algo_dsa/obj/Debug/net9.0/algo_dsa.sourcelink.json
