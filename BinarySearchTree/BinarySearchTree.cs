@@ -90,4 +90,22 @@ public class BinarySearchTree
         return current; // Will be null if not found
     }
 
+    public string Find(int key)
+    {
+        TreeNode node = Find(Root, key);
+        return node == null ? null : node.Value;
+    }
+
+    private TreeNode Find(TreeNode node, int key)
+    {
+        if (node == null || node.Key == key)
+            return node;
+
+        if (key < node.Key)
+            return Find(node.LeftChild, key);
+        else if (key > node.Key)
+            return Find(node.RightChild, key);
+
+        return null;
+    }
 }
