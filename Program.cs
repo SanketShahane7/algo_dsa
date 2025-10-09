@@ -125,10 +125,72 @@ Console.WriteLine("Hello, World!");
 
 #region Bubble Sort Implementation
 
-int[] intArray = new int[] { 6, 5, 1, 7, 2, 4 };
+// int[] intArray = new int[] { 6, 5, 1, 7, 2, 4 };
 
-int[] sortedArray = BubbleSort.Sort(intArray);
+// int[] sortedArray = BubbleSort.Sort(intArray);
 
-Console.WriteLine($"Sorted Array: {string.Join(", ", sortedArray)}");
+// Console.WriteLine($"Sorted Array: {string.Join(", ", sortedArray)}");
 
 #endregion 
+
+
+#region Recursion Implementation (Factorial)
+
+// PartyFunction();
+// void PartyFunction()
+// {
+//     Console.WriteLine("PartyFunction called");
+//     var value = Guid.NewGuid();
+//     //-- Recursivly call itself (Call Stack will keep track of calls)
+//     PartyFunction();
+//     // return true;
+// }
+
+
+// var val = 5;
+// MinusByOne(val);
+// void MinusByOne(int val)
+// {
+//     if (val != 0)
+//     {
+//         Console.WriteLine($"Current value: {val}");
+//         //-- Recursively call itself | All calls will be stored in Call Stack (Maintaining their Execution State)
+//         MinusByOne(val - 1);
+//     }
+//     Console.WriteLine($"Final value: {val}");
+// }
+
+// Console.WriteLine($"End of Program: value: {val}");
+
+
+//-- Factorial of a number using Recursion
+
+//--> Ye he Aaam jindagi
+// Console.WriteLine($"Factorial of 5 is: {IterativeFactorial(5)}");
+
+// int IterativeFactorial(int n)
+// {
+//     int factorial = 1;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         factorial *= i;
+//     }
+//     return factorial;
+// }
+
+
+//--> Ye he Mentos jindagi
+Console.WriteLine($"Factorial of 5 is: {RecursiveFactorial(5)}");
+
+int RecursiveFactorial(int n)
+{
+    if (n == 1)
+    {
+        return 1;
+    }
+    var factorial = n * RecursiveFactorial(n - 1);
+    Console.WriteLine($"Intermediate factorial for {n} is: {factorial}");
+    return factorial;
+}
+
+#endregion
