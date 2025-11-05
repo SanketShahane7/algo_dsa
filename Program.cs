@@ -5,6 +5,7 @@ using algo_dsa.BubbleSort;
 using algo_dsa.LinkedList;
 using algo_dsa.Queue;
 using algo_dsa.Stacks;
+using algo_dsa.Array.Duplicates;
 
 Console.WriteLine("Hello, World!");
 
@@ -180,17 +181,32 @@ Console.WriteLine("Hello, World!");
 
 
 //--> Ye he Mentos jindagi
-Console.WriteLine($"Factorial of 5 is: {RecursiveFactorial(5)}");
+// Console.WriteLine($"Factorial of 5 is: {RecursiveFactorial(5)}");
 
-int RecursiveFactorial(int n)
-{
-    if (n == 1)
-    {
-        return 1;
-    }
-    var factorial = n * RecursiveFactorial(n - 1);
-    Console.WriteLine($"Intermediate factorial for {n} is: {factorial}");
-    return factorial;
-}
+// int RecursiveFactorial(int n)
+// {
+//     if (n == 1)
+//     {
+//         return 1;
+//     }
+//     var factorial = n * RecursiveFactorial(n - 1);
+//     Console.WriteLine($"Intermediate factorial for {n} is: {factorial}");
+//     return factorial;
+// }
 
 #endregion
+
+
+#region Duplicates in Array using Hashing
+
+var arrayWithDuplicates = new int[] { 1, 2, 3, 2, 4, 5 };
+var arrayWithoutDuplicates = new int[] { 1, 2, 3, 4, 5 };
+
+ArrayHashingDuplicates arrayHashingDuplicates = new ArrayHashingDuplicates();
+bool hasDuplicates1 = arrayHashingDuplicates.HasDuplicate(arrayWithDuplicates);
+Console.WriteLine($"Array with duplicates has duplicates: {hasDuplicates1}"); // Expected:
+bool hasDuplicates2 = arrayHashingDuplicates.HasDuplicate(arrayWithoutDuplicates);
+Console.WriteLine($"Array without duplicates has duplicates: {hasDuplicates2}"); // Expected:
+
+#endregion
+
