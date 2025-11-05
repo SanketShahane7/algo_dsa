@@ -127,9 +127,12 @@ Console.WriteLine("Hello, World!");
 #region Bubble Sort Implementation
 
 // int[] intArray = new int[] { 6, 5, 1, 7, 2, 4 };
+// int[] intArray = new int[] { 6, 5, 1, 7, 2, 4 };
 
 // int[] sortedArray = BubbleSort.Sort(intArray);
+// int[] sortedArray = BubbleSort.Sort(intArray);
 
+// Console.WriteLine($"Sorted Array: {string.Join(", ", sortedArray)}");
 // Console.WriteLine($"Sorted Array: {string.Join(", ", sortedArray)}");
 
 #endregion 
