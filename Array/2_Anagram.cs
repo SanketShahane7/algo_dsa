@@ -1,11 +1,11 @@
 using System;
-using System.Collections.Generic;
 using System.Text;
 namespace algo_dsa.Array;
 
 public class Anagram
 {
 
+    ///-- Robust anagram check with options --///
     public bool AreAnagrams(string str1, string str2, bool ignoreCase = false, bool ignoreWhitespace = false)
     {
         if (str1 is null) throw new ArgumentNullException(nameof(str1));
@@ -70,4 +70,63 @@ public class Anagram
         }
         return sb.ToString();
     }
+
+    ///-- Simple anagram check by sorting strings --///
+    public bool IsAnagram(string s, string t)
+    {
+        if (s.Length != t.Length)
+            return false;
+
+        char[] sSort = s.ToCharArray();
+        char[] tSort = t.ToCharArray();
+        System.Array.Sort(sSort);
+        System.Array.Sort(tSort);
+        return sSort.SequenceEqual(tSort);
+    }
+
+    ///-- Anagram check using HashMap --///
+    public bool IsAnagramHashMap(string s, string t)
+    {
+        if (s.Length != t.Length)
+            return false;
+
+        Dictionary<char, int> countS = new Dictionary<char, int>();
+        Dictionary<char, int> countT = new Dictionary<char, int>();
+        for (int i = 0; i < s.Length; i++)
+        {
+            countS[s[i]] = countS.GetValueOrDefault(s[i], 0) + 1;
+            countT[t[i]] = countT.GetValueOrDefault(t[i], 0) + 1;
+        }
+
+        return countS.Count == countT.Count && !countS.Except(countT).Any();
+    }
+
+    ///-- Anagram check using fixed-size array --///
+    public bool IsAnagramArray(string s, string t)
+    {
+        if (s.Length != t.Length)
+        {
+            return false;
+        }
+
+        int[] count = new int[26];
+        for (int i = 0; i < s.Length; i++)
+        {
+            count[s[i] - 'a']++;
+            Console.WriteLine($"After incrementing for {s[i]}: {string.Join(",", count)}");
+            count[t[i] - 'a']--;
+            Console.WriteLine($"After decrementing for {t[i]}: {string.Join(",", count)}");
+        }
+
+        foreach (int val in count)
+        {
+            if (val != 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 }

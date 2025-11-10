@@ -5,7 +5,7 @@ using algo_dsa.BubbleSort;
 using algo_dsa.LinkedList;
 using algo_dsa.Queue;
 using algo_dsa.Stacks;
-using algo_dsa.Array.Duplicates;
+using algo_dsa.Array;
 
 Console.WriteLine("Hello, World!");
 
@@ -202,14 +202,50 @@ Console.WriteLine("Hello, World!");
 
 #region Duplicates in Array using Hashing
 
-var arrayWithDuplicates = new int[] { 1, 2, 3, 2, 4, 5 };
-var arrayWithoutDuplicates = new int[] { 1, 2, 3, 4, 5 };
+// var arrayWithDuplicates = new int[] { 1, 2, 3, 2, 4, 5 };
+// var arrayWithoutDuplicates = new int[] { 1, 2, 3, 4, 5 };
 
-ArrayHashingDuplicates arrayHashingDuplicates = new ArrayHashingDuplicates();
-bool hasDuplicates1 = arrayHashingDuplicates.HasDuplicate(arrayWithDuplicates);
-Console.WriteLine($"Array with duplicates has duplicates: {hasDuplicates1}"); // Expected:
-bool hasDuplicates2 = arrayHashingDuplicates.HasDuplicate(arrayWithoutDuplicates);
-Console.WriteLine($"Array without duplicates has duplicates: {hasDuplicates2}"); // Expected:
+// ArrayHashingDuplicates arrayHashingDuplicates = new ArrayHashingDuplicates();
+// bool hasDuplicates1 = arrayHashingDuplicates.HasDuplicate(arrayWithDuplicates);
+// Console.WriteLine($"Array with duplicates has duplicates: {hasDuplicates1}"); // Expected:
+// bool hasDuplicates2 = arrayHashingDuplicates.HasDuplicate(arrayWithoutDuplicates);
+// Console.WriteLine($"Array without duplicates has duplicates: {hasDuplicates2}"); // Expected:
 
 #endregion
 
+#region Anagram Check
+
+Anagram anagram = new Anagram();
+string str1 = "racecar";
+string str2 = "carrace";
+
+// bool areAnagrams = anagram.AreAnagrams(str1, str2, ignoreCase: true, ignoreWhitespace: true);
+// Console.WriteLine($"Are \"{str1}\" and \"{str2}\" anagrams? {areAnagrams}"); // Expected: True
+
+// bool IsAnagramResult = anagram.IsAnagram(str1, str2);
+// Console.WriteLine($"IsAnagram Result: {IsAnagramResult}"); // Expected: True
+
+// bool IsAnagramHashMapResult = anagram.IsAnagramHashMap(str1, str2);
+// Console.WriteLine($"IsAnagramHashMap Result: {IsAnagramHashMapResult}"); // Expected: True
+
+bool IsAnagramArrayResult = anagram.IsAnagramArray(str1, str2);
+Console.WriteLine($"IsAnagramArray Result: {IsAnagramArrayResult}"); // Expected: True
+
+#endregion
+
+#region Two Sum Problem
+
+// TwoSum twoSum = new TwoSum();
+// int[] numbers = new int[] { 2, 7, 11, 15 };
+// int target = 9;
+// int[] result = twoSum.FindTwoSum(numbers, target);
+// if (result.Length == 2)
+// {
+//     Console.WriteLine($"Two sum found at indices: {result[0]} and {result[1]}");
+// }
+// else
+// {
+//     Console.WriteLine("No two sum solution found.");
+// }
+
+#endregion

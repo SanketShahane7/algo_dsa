@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace algo_dsa.Array.Duplicates;
+namespace algo_dsa.Array;
 public class ArrayHashingDuplicates
 {
     public bool HasDuplicate(int[] nums)
