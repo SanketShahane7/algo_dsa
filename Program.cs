@@ -6,6 +6,7 @@ using algo_dsa.LinkedList;
 using algo_dsa.Queue;
 using algo_dsa.Stacks;
 using algo_dsa.Array;
+using System.Text.Json;
 
 Console.WriteLine("Hello, World!");
 
@@ -215,9 +216,9 @@ Console.WriteLine("Hello, World!");
 
 #region Anagram Check
 
-Anagram anagram = new Anagram();
-string str1 = "racecar";
-string str2 = "carrace";
+// Anagram anagram = new Anagram();
+// string str1 = "racecar";
+// string str2 = "carrace";
 
 // bool areAnagrams = anagram.AreAnagrams(str1, str2, ignoreCase: true, ignoreWhitespace: true);
 // Console.WriteLine($"Are \"{str1}\" and \"{str2}\" anagrams? {areAnagrams}"); // Expected: True
@@ -228,8 +229,8 @@ string str2 = "carrace";
 // bool IsAnagramHashMapResult = anagram.IsAnagramHashMap(str1, str2);
 // Console.WriteLine($"IsAnagramHashMap Result: {IsAnagramHashMapResult}"); // Expected: True
 
-bool IsAnagramArrayResult = anagram.IsAnagramArray(str1, str2);
-Console.WriteLine($"IsAnagramArray Result: {IsAnagramArrayResult}"); // Expected: True
+// bool IsAnagramArrayResult = anagram.IsAnagramArray(str1, str2);
+// Console.WriteLine($"IsAnagramArray Result: {IsAnagramArrayResult}"); // Expected: True
 
 #endregion
 
@@ -247,5 +248,18 @@ Console.WriteLine($"IsAnagramArray Result: {IsAnagramArrayResult}"); // Expected
 // {
 //     Console.WriteLine("No two sum solution found.");
 // }
+
+#endregion
+
+#region Group Anagrams
+
+GroupAnagrams groupAnagrams = new GroupAnagrams();
+string[] strs = new string[] { "eat", "tea", "tan", "ate", "nat", "bat" };
+List<List<string>> groupedAnagrams1 = groupAnagrams.GroupAnagramsHashMap(strs);
+List<List<string>> groupedAnagrams2 = groupAnagrams.GroupAnagramsSort(strs);
+
+Console.WriteLine("--> Results:");
+Console.WriteLine($"Grouped Anagrams HashMap: {JsonSerializer.Serialize(groupedAnagrams1)}");
+Console.WriteLine($"Grouped Anagrams Sort: {JsonSerializer.Serialize(groupedAnagrams2)}");
 
 #endregion
